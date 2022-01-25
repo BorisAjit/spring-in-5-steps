@@ -17,5 +17,14 @@ public class SomeCDIBussiness {
 		this.someCDIDao = someCDIDao;
 	}
 	
-	
+	public int findGreatest() {
+		int[] arrary = someCDIDao.getdata();
+		int greatest = Integer.MIN_VALUE;
+		for (int i : arrary) {
+			if(greatest<i) {
+				greatest = i;
+			}
+		}
+		return greatest;
+	}
 }
